@@ -5,8 +5,11 @@ import {
   WebGLRenderer,
   BoxGeometry,
   MeshBasicMaterial,
+  ShaderMaterial,
   Mesh,
 } from "three";
+import vertexShader from "./shaders/vertex.glsl";
+import fragmentShader from "./shaders/fragment.glsl";
 
 const app = document.querySelector("#app")!;
 
@@ -23,7 +26,7 @@ renderer.setSize(window.innerWidth / 1.5, window.innerHeight / 1.5);
 app.appendChild(renderer.domElement);
 
 const geometry = new BoxGeometry(1, 1, 1);
-const material = new MeshBasicMaterial({ color: 0x00ff00 });
+const material = new ShaderMaterial({ vertexShader, fragmentShader });
 const cube = new Mesh(geometry, material);
 scene.add(cube);
 
