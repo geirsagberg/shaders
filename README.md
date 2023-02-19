@@ -35,6 +35,3 @@ Vi kan jo ikke holde oss til å bare tegne enkle todimensjonale former! La oss i
 Scenen i koden inneholder allerede en kube. Faktisk har shaderene vi har skrevet til nå blitt kjørt for denne kuben! Problemet er at vertex shaderen vår ikke håndterer 3D-projeksjon, og derfor har vi kun fått et 2D-bilde. Dette skal vi gjøre noe med nå!
 
 > **Tips:** Projeksjon i vertex shaderen er egentlig bare en nokså enkel matrisemultiplikasjon med en `projectionMatrix`, en `modelViewMatrix` og posisjonen til vertexen vi behandler – og de to matrisene finnes allerede som variabler i vertex shaderen!
-
-
-> **Tips:** Dette er en ganske vanskelig oppgave å 
