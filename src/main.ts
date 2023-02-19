@@ -27,16 +27,16 @@ app.appendChild(renderer.domElement);
 
 const geometry = new BoxGeometry(1, 1, 1);
 const material = new ShaderMaterial({ vertexShader, fragmentShader });
+
 const cube = new Mesh(geometry, material);
+cube.rotation.x = 0.5;
+cube.rotation.y = 0.5;
 scene.add(cube);
 
 camera.position.z = 5;
-
 const animate = () => {
   requestAnimationFrame(animate);
   renderer.render(scene, camera);
-  cube.rotation.x += 0.01;
-  cube.rotation.y += 0.01;
 };
 
 animate();
