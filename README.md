@@ -35,3 +35,9 @@ Vi kan jo ikke holde oss til å bare tegne enkle todimensjonale former! La oss i
 Scenen i koden inneholder allerede en kube. Faktisk har shaderene vi har skrevet til nå blitt kjørt for denne kuben! Problemet er at vertex shaderen vår ikke håndterer 3D-projeksjon, og derfor har vi kun fått et 2D-bilde. Dette skal vi gjøre noe med nå!
 
 > **Tips:** Projeksjon i vertex shaderen er egentlig bare en nokså enkel matrisemultiplikasjon med en `projectionMatrix`, en `modelViewMatrix` og posisjonen til vertexen vi behandler – og de to matrisene finnes allerede som variabler i vertex shaderen!
+
+### 5. Flytt på vertices!
+Nå har vi klart å rendre en kube – men kuber er jo egentlig også ganske kjedelige! Kanskje vi kan bruke vertex shaderen til å flytte på noen vertices slik at vi får en litt annen form enn en kube? Vær kreativ!
+
+### 6. Animert flytting av vertices!
+Hvis vi kan flytte på vertices, kan vi også la denne flyttingen endre seg over tid! Du har en uniform `u_time` tilgjengelig i vertex shaderen – klarer du å bruke denne til å skape en animert flytting av vertices?
