@@ -1,15 +1,15 @@
 uniform vec2 u_resolution;
 uniform float u_time;
 
-float random(vec2 st) {
-  return fract(sin(dot(st.xy, vec2(12.9898, 78.233))) *
-    43758.5453123);
-}
-
 void main() {
-  vec2 st = gl_FragCoord.xy / u_resolution.xy;
+  // Draw a rectangle
+  vec2 st = gl_FragCoord.xy / u_resolution;
 
-  float rnd = random(st * u_time);
+  vec3 white = vec3(1.0);
+  vec3 black = vec3(0.0);
 
-  gl_FragColor = vec4(vec3(rnd), 1.0);
+  vec3 color = st.x > 0.25 && st.x < 0.75 && st.y > 0.25 && st.y < 0.75 ? white : black;
+
+  gl_FragColor = vec4(color, 1.0);
+
 }
