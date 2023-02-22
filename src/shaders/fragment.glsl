@@ -2,7 +2,12 @@ uniform vec2 u_resolution;
 uniform float u_time;
 
 void main() {
-  float color = 1.0;
+  vec2 st = gl_FragCoord.xy / u_resolution.xy;
+  vec3 color = vec3(0.0);
 
-  gl_FragColor = vec4(vec3(color), 1.0);
+  // Add some noise
+  color += vec3(st.x, st.y, abs(sin(u_time)) * 0.5);
+
+  // Output to screen
+  gl_FragColor = vec4(color, 1.0);
 }
