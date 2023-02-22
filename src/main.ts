@@ -1,18 +1,17 @@
-import "./style.css";
 import {
-  Scene,
-  PerspectiveCamera,
-  WebGLRenderer,
   BoxGeometry,
-  MeshBasicMaterial,
-  ShaderMaterial,
-  Mesh,
   Clock,
-} from "three";
-import vertexShader from "./shaders/vertex.glsl";
-import fragmentShader from "./shaders/fragment.glsl";
+  Mesh,
+  PerspectiveCamera,
+  Scene,
+  ShaderMaterial,
+  WebGLRenderer,
+} from 'three';
+import fragmentShader from './shaders/fragment.glsl';
+import vertexShader from './shaders/vertex.glsl';
+import './style.css';
 
-const app = document.querySelector("#app")!;
+const app = document.querySelector('#app')!;
 
 const scene = new Scene();
 const camera = new PerspectiveCamera(
