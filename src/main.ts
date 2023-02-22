@@ -35,6 +35,7 @@ const uniforms = {
 };
 
 const geometry = new BoxGeometry(1, 1, 1);
+
 const material = new ShaderMaterial({
   vertexShader,
   fragmentShader,
